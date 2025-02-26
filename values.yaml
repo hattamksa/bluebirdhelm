@@ -1,0 +1,17 @@
+service:
+  enabled: true
+  type: ClusterIP
+  port: 80
+deployment:
+  enabled: true
+  replicas: 1
+hpa:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 5
+ingress:
+  enabled: false
+  host: bluebird.deployment.id
+configmap:
+  enabled: false
+  data: {}

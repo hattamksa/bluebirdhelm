@@ -1,0 +1,8 @@
+{{- if .Values.deployment.enabled }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bluebird-deployment
+spec:
+  replicas: {{ .Values.deployment.replicas }}
+{{- end }}
